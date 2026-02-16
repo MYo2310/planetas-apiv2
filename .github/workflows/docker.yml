@@ -31,6 +31,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: |
+          tags:
             yolanda2310/imagen:latest
-            

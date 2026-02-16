@@ -36,9 +36,10 @@ test("✅ /sistema devuelve Mercurio, Venus y Tierra con sus lunas", async () =>
     { nombre: "Mercurio", tipo: "Rocoso", lunas: [] },
     { nombre: "Venus", tipo: "Rocoso", lunas: [] },
     { nombre: "Tierra", tipo: "Rocoso", lunas: ["Luna"] },
+    { nombre: "Marte2", tipo: "Rocoso", lunas: ["Fobos","Deimos"] },
   ];
 
-  const res = await getJSON("/sistema?planetas=mercurio,venus,tierra");
+  const res = await getJSON("/sistema?planetas=Mercurio,Venus,Tierra,Marte2");
   expect(res.statusCode).toBe(200);
   expect(res.body).toEqual(esperado); // estricto
 });
